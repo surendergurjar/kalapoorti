@@ -20,6 +20,8 @@ export default function Navbar() {
         <div className="flex items-center gap-4 text-sm">
           {user ? (
             <>
+              <Link to="/matches" className="hover:underline">Matches</Link>
+              <Link to="/requests" className="hover:underline">Requests</Link>
               <Link to="/profile" className="hover:underline">My profile</Link>
               <button onClick={handleLogout} className="text-gray-600 hover:underline">
                 Log out

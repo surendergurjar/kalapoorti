@@ -6,6 +6,8 @@ import Home from './pages/Home.jsx'
 import Signup from './pages/Signup.jsx'
 import Login from './pages/Login.jsx'
 import Profile from './pages/Profile.jsx'
+import Matches from './pages/Matches.jsx'
+import Requests from './pages/Requests.jsx'
 
 export default function App() {
   if (!supabaseConfigured) {
@@ -34,6 +36,22 @@ export default function App() {
             element={
               <ProtectedRoute>
                 <Profile />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/matches"
+            element={
+              <ProtectedRoute>
+                <Matches />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/requests"
+            element={
+              <ProtectedRoute>
+                <Requests />
               </ProtectedRoute>
             }
           />
